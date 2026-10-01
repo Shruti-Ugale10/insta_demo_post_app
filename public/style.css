@@ -1,0 +1,60 @@
+body{
+    margin-left:30px ;
+    background-color: rgb(249, 219, 224);
+}
+
+h1{
+    color: rgb(11, 10, 10);
+    font-family: fantasy;
+    
+}
+
+p{
+    font-weight: 600;
+}
+
+div{
+    background-color: pink;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.img{
+    height: 100px;
+    width: 100px;
+}
+
+.img-view{
+    height: 300px;
+    width: 400px;
+}
+
+button {
+    background-color: rgb(197, 147, 175);
+    color: black;
+    border: 2px solid palevioletred;
+    border-radius: 20px;
+}
+
+.delete-btn {
+    background-color: rgb(227, 199, 215);
+    color: black;
+    border: 2px solid palevioletred;
+    border-radius: 5px;
+}
+
+a{
+    color: black;
+}
+
+.like-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.like-btn:hover {
+    transform: scale(1.1);
+}
+

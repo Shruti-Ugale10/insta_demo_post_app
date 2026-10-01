@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Main Instagram page</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>Welcome to Instagram </h1>
+
+    <% for (post of posts) {%>
+        <div>
+            <h3>Username : @ <%=post.username%></h3>
+            <img  class="img" src="<%=post.image %> "/>
+            <h4>caption : <%=post.caption%></h4>
+            <h4>Likes :  
+                <button class="like-btn" type="button">
+                    ❤️ <span class="like-count"><%= post.likes %></span>
+                </button>
+            </h4>
+
+            <button>
+                <a href="http://localhost:8080/posts/<%=post.id%>">See in detail</a>
+            </button>
+
+            <button>
+                <a href="http://localhost:8080/posts/<%=post.id%>/edit">Edit Post</a>
+            </button><br><br>
+
+            <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                <button class="delete-btn">
+                     Delete Post
+                </button>
+            </form>
+           
+        </div>
+
+    <%}%><br>
+ 
+    <button><a href="http://localhost:8080/posts/new">Create New Post</a></button>
+   
+
+    
+    <!-- Like Button JavaScript -->
+    <script>
+        const likeButtons = document.querySelectorAll(".like-btn");
+
+        likeButtons.forEach((button) => {
+
+            button.addEventListener("click", () => {
+
+                const count = button.querySelector(".like-count");
+
+                let likes = Number(count.innerText);
+
+                likes++;
+
+                count.innerText = likes;
+            });
+
+        });
+    </script>
+</body>
+</html>

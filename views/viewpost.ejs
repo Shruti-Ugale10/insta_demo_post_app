@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Post </title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>View post</h1>
+    
+    <div>
+        <p>Post ID : <%= post.id %></p>
+        <h3>Username : @ <%=post.username%></h3>
+            <img  class="img img-view" src="<%=post.image %> "/>
+            <h4>cpation : <%=post.caption%></h4>
+            <h4>Likes :  
+                <button class="like-btn" type="button">
+                    ❤️ <span class="like-count"><%= post.likes %></span>
+                </button>
+            </h4>
+    </div><br>
+    <button><a href="http://localhost:8080/posts">Go Back</a></button>
+    
+    
+</body>
+</html>
